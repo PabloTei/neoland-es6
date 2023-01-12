@@ -19,3 +19,17 @@ const getSum2 = (a, b) => a + b;
 
 const sum2 = getSum2 (10, 5);
 console.log(sum);
+
+
+// Iteración #2: Destructuring
+// 2.1
+
+const game = {title: 'The last us 2', gender: ['action', 'zombie', 'survival'], year: 2020};
+
+const {title, gender, year} = game;
+console.log(title);
+console.log(gender);
+console.log(year);
+
+
+
