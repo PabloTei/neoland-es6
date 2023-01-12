@@ -66,3 +66,9 @@ const pointsList = [32, 54, 21, 64, 75, 43]
 let copy = [...pointsList];
 console.log(copy);
 
+// 3.2
+
+const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+
+let copy1 = {...toy};
+console.log(copy1);
