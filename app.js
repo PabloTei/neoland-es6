@@ -40,3 +40,13 @@ console.log(fruit1);
 console.log(fruit2);
 console.log(fruit3);
 
+// 2.3
+
+const animalFunction = () => {
+    return {name: 'Bengal Tiger', race: 'Tiger'}
+};
+
+const {name, race} = animalFunction();
+console.log(name);
+console.log(race);
+
