@@ -80,3 +80,22 @@ const pointsList2 = [54,87,99,65,32];
 
 const unirPointsList = [...pointsList, ...pointsList2];
 console.log(unirPointsList);
+
+// 3.4
+
+const toy2 = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']}
+
+const newToys = {...toy2, ...toyUpdate};
+console.log(newToys);
+
+// 3.5
+
+const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
+
+const eColors = [...colors];
+const eColors1 = [eColors.splice(1, 1)];
+
+console.log(eColors);
+console.log(colors);
+
