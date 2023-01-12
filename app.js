@@ -50,3 +50,19 @@ const {name, race} = animalFunction();
 console.log(name);
 console.log(race);
 
+// 2.4  ------ SIN HACER, CONSULTAR.
+
+/*const car = {name1: 'Mazda 6', itv: [2015, 2011, 2020] }
+
+const {name1, itv: (2015)} = car;
+console.log(name1);
+console.log(itv);*/
+
+// Iteración #3: Spread Operator
+// 3.1
+
+const pointsList = [32, 54, 21, 64, 75, 43]
+
+let copy = [...pointsList];
+console.log(copy);
+
