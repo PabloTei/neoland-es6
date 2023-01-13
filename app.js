@@ -121,5 +121,42 @@ const nameFunction = () => {
 
 }
 
-console.log(nameFunction(users))
+console.log(nameFunction(users));
+
+// 4.2  
+
+const users1 = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+const nameFunction1 = () => {
+
+    return users1.map((user) => (user.name[0] === "A" ? {name: "Anacleto"} : {name: user.name}))
+}
+console.log(nameFunction1(users1));
+
+
+// 4.3
+
+const cities = [
+	{isVisited:true, name: 'Tokyo'}, 
+	{isVisited:false, name: 'Madagascar'},
+	{isVisited:true, name: 'Amsterdam'}, 
+	{isVisited:false, name: 'Seul'}
+];
+
+const citiesVisited = () => {
+
+const allCities = cities.map((city) => ({
+name: city.name,
+    
+    }))
+   return allCities;
+}
+
+console.log(citiesVisited(cities));
+
 
