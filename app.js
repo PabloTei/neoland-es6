@@ -150,10 +150,7 @@ const cities = [
 
 const citiesVisited = () => {
 
-const allCities = cities.map((city) => ({
-name: city.name,
-    
-    }))
+const allCities = cities.map((city) => (city.isVisited ? `${city.name}: Visitado` : city.name))
    return allCities;
 }
 
