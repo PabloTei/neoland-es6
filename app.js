@@ -96,6 +96,30 @@ const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
 const eColors = [...colors];
 const eColors1 = [eColors.splice(1, 1)];
 
-console.log(eColors);
 console.log(colors);
+console.log(eColors);
+
+
+// Iteración #4: Map
+// 4.1
+
+const users = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+const nameFunction = () => {
+
+    const names = users.map((user) => ({
+    name: user.name,
+    
+    }))
+
+    return names;
+
+}
+
+console.log(nameFunction(users))
 
