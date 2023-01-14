@@ -338,3 +338,8 @@ const exams2 = [
     {name: 'Keanu Reeves', score: 10}
 ];
 
+const functionMedScore = () => {
+    return exams2.reduce((acc, exam) => acc + exam.score / exams2.length, 0);
+}
+console.log(functionMedScore());
+
