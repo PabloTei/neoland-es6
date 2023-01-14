@@ -161,10 +161,17 @@ console.log(citiesVisited(cities));
 
 const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
 
-const myFunctionMayor18 = (x) => {
-    return ages.filter((number) => number > x);
+const myFunctionMayor18 = (x) => { // Declaramos la función con parámetro x para que podamos comparar con cualquier edad, no solo con 18.
+    return ages.filter((number) => number > x); // realizamos funcion filter de la lista ages y cogemos unicamente los valores mayores de el parametro incluido
+} 
+console.log(myFunctionMayor18(18)); // llamamos a la función e indicamos el parametro que queremos comparar
+
+
+// 5.2
+
+const ages1 = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+const myFunctionPar = () => {
+    return numPar = ages1.filter((number) => number %2 === 0);
 }
-console.log(myFunctionMayor18(18));
-
-
-
+console.log(myFunctionPar());
