@@ -187,7 +187,23 @@ streamers = [
 ];
 
 const filterGameMorePlayed = (gameMorePlayed) => {
-    const streamersPlayed = streamers.filter((streamer) => streamer.gameMorePlayed.toLowerCase(gameMorePlayed) === gameMorePlayed.toLowerCase(gameMorePlayed));
+    const streamersPlayed = streamers.filter((streamer) => streamer.gameMorePlayed.toLowerCase(gameMorePlayed) === gameMorePlayed.toLowerCase(gameMorePlayed)); // Declarar nueva variable para almacenar un nuevo array, filtrar para que me aparezcan SOLO los streamers que juegan al juego solicitado por parámetro, añadiendo también que si el nombre aparece en minúscula o mayúscula o distintos caracteres llegue igual a la coincidencia
     return streamersPlayed;
 }
 console.log(filterGameMorePlayed("league of legends")); 
+
+
+// 5.4
+
+const streamers1 = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+
+const allFilterStreamers = (letra) => {
+    const newFilterStreamers = streamers1.filter((streamer) => streamer.name.includes(letra));
+    return newFilterStreamers;
+}
+console.log(allFilterStreamers("u"));
