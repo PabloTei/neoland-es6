@@ -343,3 +343,7 @@ const functionMedScore = () => {
 }
 console.log(functionMedScore());
 
+
+// Iteración #8: Bonus
+// 8.1
+
