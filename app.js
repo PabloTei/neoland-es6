@@ -156,4 +156,15 @@ return cities.map((city) => (city.isVisited ? `${city.name}: Visitado` : city.na
 
 console.log(citiesVisited(cities));
 
+// Iteración #5: Filter
+// 5.1
+
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+const myFunctionMayor18 = (x) => {
+    return ages.filter((number) => number > x);
+}
+console.log(myFunctionMayor18(18));
+
+
 
