@@ -252,4 +252,31 @@ const findMovieDate = (age) => {
     const movieAge = movies.find((movie) => movie.date === age)
     return movieAge;
 }
-console.log(findMovieDate(2010));
+console.log(findMovieDate());
+
+// 6.3
+
+const aliens = [
+	{name_alien: 'Zalamero', planet: 'Eden', age: 4029},
+	{name_alien: 'Paktu', planet: 'Andromeda', age: 32},
+	{name_alien: 'Cucushumushu', planet: 'Marte', age: 503021}
+];
+const mutations = [
+	{name_mutation: 'Porompompero', description: 'Hace que el alien pueda adquirir la habilidad de tocar el tambor'},
+	{name_mutation: 'Fly me to the moon', description: 'Permite volar, solo y exclusivamente a la luna'},
+	{name_mutation: 'Andando que es gerundio', description: 'Invoca a un señor mayor como Personal Trainer'}
+];
+
+const searchAliens = (name_alien) => {
+    const alien = aliens.find((alien) => alien.name_alien === name_alien);
+    return alien;
+}
+
+const searchMutations = (name_mutation) => {
+    const mutation = mutations.find((mutation) => mutation.name_mutation === name_mutation);
+    return mutation;
+}
+
+const alinesAndMutations = {...searchAliens("Cucushumushu"), ...searchMutations("Porompompero")};
+console.log(alinesAndMutations);
+
