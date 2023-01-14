@@ -1,3 +1,4 @@
+/*
 // 1.1 Ejecuta esta función sin pasar ningún parametro
 
 const getSum = () => {
@@ -207,3 +208,20 @@ const allFilterStreamers = (letra) => {
     return newFilterStreamers;
 }
 console.log(allFilterStreamers("u"));
+
+// 5.5
+
+const streamers2 = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+
+const newFunctionFilter = (palabra) => {
+    let newStreamersFilter = streamers2.filter((streamer) => streamer.gameMorePlayed.toLowerCase(streamer.gameMorePlayed).includes(palabra.toLowerCase(palabra)));
+    let newStreamersFilter1 = newStreamersFilter.map((streamer) => streamer.age > 35 ? streamer.gameMorePlayed.toUpperCase(streamer.gameMorePlayed) : streamer.gameMorePlayed);
+    return newStreamersFilter1;
+}
+console.log(newFunctionFilter("Legends"));
+
