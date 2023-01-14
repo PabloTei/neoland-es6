@@ -207,7 +207,7 @@ const allFilterStreamers = (letra) => {
     const newFilterStreamers = streamers1.filter((streamer) => streamer.name.includes(letra));
     return newFilterStreamers;
 }
-console.log(allFilterStreamers("u"));
+console.log(allFilterStreamers(""));
 
 // 5.5
 
@@ -220,7 +220,7 @@ const streamers2 = [
 
 const newFunctionFilter = (palabra) => {
     let newStreamersFilter = streamers2.filter((streamer) => streamer.gameMorePlayed.toLowerCase(streamer.gameMorePlayed).includes(palabra.toLowerCase(palabra)));
-    let newStreamersFilter1 = newStreamersFilter.map((streamer) => streamer.age > 35 ? streamer.gameMorePlayed.toUpperCase(streamer.gameMorePlayed) : streamer.gameMorePlayed);
+    let newStreamersFilter1 = newStreamersFilter.map((streamer) => streamer.age > 35 ? {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed.toUpperCase(streamer.gameMorePlayed)} : {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed});
     return newStreamersFilter1;
 }
 console.log(newFunctionFilter("Legends"));
