@@ -319,9 +319,22 @@ const exams1 = [
 
 const functionSumScoreApproved = () => {
 
-    let alumnosAprobados = exams1.map((alumno) => alumno.score >= 5 ? alumno.score : alumno.score = 0);
-    alumnosAprobados = alumnosAprobados.reduce((acc, score) => acc + score, 0)
-    return alumnosAprobados;
-}
+    return exams1.map((alumno) => alumno.score >= 5 ? alumno.score : alumno.score = 0).reduce((acc, score) => acc + score, 0);
+   }
 console.log(functionSumScoreApproved());
+
+// 7.3
+
+const exams2 = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
 
