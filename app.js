@@ -1,4 +1,4 @@
-/*
+
 // 1.1 Ejecuta esta función sin pasar ningún parametro
 
 const getSum = () => {
@@ -280,3 +280,24 @@ const searchMutations = (name_mutation) => {
 const alinesAndMutations = {...searchAliens("Cucushumushu"), ...searchMutations("Porompompero")};
 console.log(alinesAndMutations);
 
+// Iteración #7: Reduce
+// 7.1
+
+const exams = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+
+const functionSumScore = () => {
+    const sumScore = exams.reduce((acc, exam) => acc + exam.score, 0);
+    return sumScore;
+}
+console.log(functionSumScore());
