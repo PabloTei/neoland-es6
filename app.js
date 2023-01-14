@@ -347,3 +347,22 @@ console.log(functionMedScore());
 // Iteración #8: Bonus
 // 8.1
 
+const videogames = [
+    {name: 'Final Fantasy VII', genders: ['RPG'], score: 9.5},
+    {name: 'Assasins Creed Valhala', genders: ['Aventura', 'RPG'], score: 4.5},
+    {name: 'The last of Us 2', genders: ['Acción', 'Aventura'], score: 9.8},
+    {name: 'Super Mario Bros', genders: ['Plataforma'], score: 8.5},
+    {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
+    {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
+]
+
+const genderFunction = (gender) => {
+    let gender1 = videogames.filter((videogame) => videogame.genders.includes(gender));
+    return gender1;
+}
+const scoreMedFunction = () => {
+    let score1 = genderFunction("RPG").reduce((acc, score) => acc + score / genderFunction("RPG").length, 0);
+    return score1;
+}
+console.log(genderFunction("RPG"));
+console.log(scoreMedFunction());
