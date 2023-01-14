@@ -218,10 +218,38 @@ const streamers2 = [
 	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
 ];
 
-const newFunctionFilter = (palabra) => {
-    let newStreamersFilter = streamers2.filter((streamer) => streamer.gameMorePlayed.toLowerCase(streamer.gameMorePlayed).includes(palabra.toLowerCase(palabra)));
-    let newStreamersFilter1 = newStreamersFilter.map((streamer) => streamer.age > 35 ? {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed.toUpperCase(streamer.gameMorePlayed)} : {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed});
-    return newStreamersFilter1;
-}
-console.log(newFunctionFilter("Legends"));
+const newFunctionFilter = (palabra, edad) => {
+    let newStreamersFilter = streamers2.filter((streamer) => streamer.gameMorePlayed.toLowerCase(streamer.gameMorePlayed).includes(palabra.toLowerCase(palabra))); 
 
+    newStreamersFilter = newStreamersFilter.map((streamer) => streamer.age > edad ? {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed.toUpperCase(streamer.gameMorePlayed)} : {name: streamer.name, age: streamer.age, gameMorePlayed: streamer.gameMorePlayed});
+
+    return newStreamersFilter;
+}
+console.log(newFunctionFilter("Legends", 35));
+
+
+// Iteración #6: Find
+// 6.1
+
+const numbers = [32, 21, 63, 95, 100, 67, 43];
+
+const findNum = (x) => {
+    const num1 = numbers.find(number => number === x);
+    return num1;
+}
+console.log(findNum(100));
+
+
+// 6.2
+
+const movies = [
+	{title: 'Madagascar', stars: 4.5, date: 2015},
+	{title: 'Origen', stars: 5, date: 2010},
+	{title: 'Your Name', stars: 5, date: 2016}
+];
+
+const findMovieDate = (age) => {
+    const movieAge = movies.find((movie) => movie.date === age)
+    return movieAge;
+}
+console.log(findMovieDate(2010));
