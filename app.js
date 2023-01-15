@@ -360,9 +360,11 @@ const genderFunction = (gender) => {
     let gender1 = videogames.filter((videogame) => videogame.genders.includes(gender));
     return gender1;
 }
-const scoreMedFunction = () => {
-    let score1 = genderFunction("RPG").reduce((acc, score) => acc + score / genderFunction("RPG").length, 0);
+const scoreMedFunction = (gender) => {
+    let score1 = genderFunction(gender).map((score) => genderFunction.score);
     return score1;
 }
-console.log(genderFunction("RPG"));
-console.log(scoreMedFunction());
+console.log(genderFunction("RPG"), scoreMedFunction("RPG"));
+
+
+
