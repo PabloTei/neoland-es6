@@ -357,9 +357,7 @@ const videogames = [
 ]
 
 const genderFunction = (gender) => {
-    return videogames.filter(((videogame) => videogame.genders.includes(gender))).map(((videogame) => videogame.score)).reduce((acc, score) => acc + score / videogames.length);
+    let x = videogames.filter(((videogame) => videogame.genders.includes(gender))).map(((videogame) => videogame.score)); // Realizamos el filtro para encontrar los juegos por el género, inmediatamente concatenamos un map para sacar de esos juegos filtrados anteriormente su puntuación
+    return x.reduce((acc, score) => acc + score / x.length, 0); // De los dos métodos aplicados anteriormente (filter y map) hacemos un reduce para devolver la media de las notas de los videojuegos filtrados anteriormente
 }
 console.log(genderFunction("RPG"));
-
-
-
